@@ -7,8 +7,7 @@ import jakarta.persistence.Id;
 import lombok.*;
 
 @Entity
-@NoArgsConstructor @AllArgsConstructor @Getter
-@Setter @Builder
+@NoArgsConstructor @AllArgsConstructor @Getter @Setter @Builder
 public class Customer {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
