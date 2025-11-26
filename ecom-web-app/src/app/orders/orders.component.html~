@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="table" *ngIf="bills">
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>CustomerId</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let b of bills._embedded.bills">
+      <td>{{ b.billingDate | date : 'yyyy-MM-dd' }}</td>
+      <td>{{ b.customerId }}</td>
+      <td>
+        <button class="btn-outline-primary" (click)="getOderDetails(b)">OrderDetails</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
